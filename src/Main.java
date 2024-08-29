@@ -35,8 +35,7 @@ public class Main {
             System.out.println("8. Ширина коллеи в крестовине по прямому направлянию");
             System.out.println("9. Ширина коллеи в хвосте крестовины по боковому направлянию");
             System.out.println("10. Ширина коллеи в хвосте крестовины по прямому направлянию");
-            System.out.println("11. Вторая страница");
-            System.out.println("12. Выход из приложения");
+            System.out.println("11. Выход из приложения");
             s = scanner.next();
 
             // походу дублирует ответ ниже
@@ -57,8 +56,7 @@ public class Main {
                 case 8 -> Main.vKristovinePryamo();
                 case 9 -> Main.vHvosteKristoviniNaBok();
                 case 10 -> Main.vHvosteKristoviniPryamo();
-                case 11 -> secondNenu();
-                case 12 -> {
+                case 11 -> {
                     System.out.println("До свидания!");
                     System.exit(0);
                 }
@@ -190,39 +188,4 @@ public class Main {
             System.out.println("Ширина коллеи " + vHvosteKristoviniPryamo + " мм в хвосте крестовины по прямому направлянию ТРЕБУЕТ ЗААКРЫТИЯ ДЛЯ ДВИЖЕНИЯ!");
         }
     }
-
-    public static void secondNenu() {
-        int x = 0;
-        String s ="";
-
-
-        while (!"11".equals(s)){
-            System.out.println("\n1. Ширина коллеи в приемном стыке");
-            System.out.println("2. Ширина коллеи у острия остряков");
-            System.out.println("3. Ширина коллеи в корне остряка по боковому направлянию");
-            System.out.println("4. Выход из приложения");
-            s = scanner.next();
-
-            // походу дублирует ответ ниже
-            try {
-                x = Integer.parseInt(s);
-            } catch (NumberFormatException e){
-                System.out.println("Неверный значение");
-            }
-
-            switch (x){
-                case 1 -> Main.vPriemnomStike();
-                case 2 -> Main.uOstriyaOstryakov();
-                case 3 -> Main.vKorneOstryakaNaBok();
-                case 4 -> {
-                    System.out.println("До свидания!");
-                    System.exit(0);
-                }
-                default -> System.out.println("Неверное значение");
-            }
-            Main.pressEnterToContinue();
-        }
-    }
-
-
 }
