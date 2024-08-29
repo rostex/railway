@@ -1,11 +1,10 @@
 import java.util.Scanner;
 
-// TODO Убрать многократное обращение к Сканеру, поменять диапазон наоборот, обработать исклбючения в Integer.parseInt, while (!"11".equals(s)) заменил бы на while (true)
-
 public class Main {
 
     private final static Scanner scanner = new Scanner(System.in);
 
+    //Метод ожидания ввода клавиши
     private static void pressEnterToContinue(){
         System.out.println("Нажмите Enter, чтобы продолжить...");
         try
@@ -23,7 +22,7 @@ public class Main {
         int x = 0;
         String s ="";
 
-
+        // Контекстное меню
         while (!"11".equals(s)){
             System.out.println("\n1. Ширина коллеи в приемном стыке");
             System.out.println("2. Ширина коллеи у острия остряков");
@@ -38,7 +37,6 @@ public class Main {
             System.out.println("11. Выход из приложения");
             s = scanner.next();
 
-            // походу дублирует ответ ниже
             try {
                 x = Integer.parseInt(s);
             } catch (NumberFormatException e){
@@ -67,6 +65,7 @@ public class Main {
 
     }
 
+    //В приемном стыке
     public static void vPriemnomStike() {
 
         System.out.println("\nВведите ширину коллеи в приемном стыке в милиметрах: ");
@@ -80,6 +79,7 @@ public class Main {
         }
     }
 
+    //У острия остряков
     public static void uOstriyaOstryakov() {
 
         System.out.println("\nВведите ширину коллеи у острия остряков в милиметрах: ");
@@ -93,6 +93,7 @@ public class Main {
         }
     }
 
+    //В корне остряков по боковому направлению
     public static void vKorneOstryakaNaBok() {
         System.out.println("\nВведите ширину коллеи в корне остряка по боковому направлянию в милиметрах: ");
         int vKorneOstryakaNaBok = Integer.parseInt(scanner.next());
@@ -105,6 +106,7 @@ public class Main {
         }
     }
 
+    //В корне остряков по прямому направлению
     public static void vKorneOstryakaPryamo() {
         System.out.println("\nВведите ширину коллеи в корне остряка по прямому направлянию в милиметрах: ");
         int vKorneOstryakaPryamo = Integer.parseInt(scanner.next());
@@ -117,6 +119,7 @@ public class Main {
         }
     }
 
+    //В переводной кривой
     public static void vPerevodnoyKrivoy() {
         System.out.println("\nВведите ширину коллеи в переводной кривой в милиметрах: ");
         int vPerevodnoyKrivoy = Integer.parseInt(scanner.next());
@@ -129,6 +132,7 @@ public class Main {
         }
     }
 
+    //В переднем вылете крестовины
     public static void vPerednemVileteKrestovini() {
         System.out.println("\nВведите ширину коллеи в переднем вылете крестовины в милиметрах: ");
         int vPerednemVileteKrestovini = Integer.parseInt(scanner.next());
@@ -141,6 +145,7 @@ public class Main {
         }
     }
 
+    //В кристовине по боковому направлению
     public static void vKristovineNaBok() {
         System.out.println("\nВведите ширину коллеи в крестовине по боковому направлянию в милиметрах: ");
         int vKristovineNaBok = Integer.parseInt(scanner.next());
@@ -153,6 +158,7 @@ public class Main {
         }
     }
 
+    //В крестовине по прямому направлению
     public static void vKristovinePryamo() {
         System.out.println("\nВведите ширину коллеи в крестовине по прямому направлянию в милиметрах: ");
         int vKristovinePryamo = Integer.parseInt(scanner.next());
@@ -165,6 +171,7 @@ public class Main {
         }
     }
 
+    //В хвосте крестовины по боковому направлению
     public static void vHvosteKristoviniNaBok() {
         System.out.println("\nВведите ширину коллеи в хвосте крестовины по боковому направлянию в милиметрах: ");
         int vHvosteKristoviniNaBok = Integer.parseInt(scanner.next());
@@ -177,6 +184,7 @@ public class Main {
         }
     }
 
+    //В хвосте кристовины по прямому направлению
     public static void vHvosteKristoviniPryamo() {
         System.out.println("\nВведите ширину коллеи в хвосте крестовины по прямому направлянию в милиметрах: ");
         int vHvosteKristoviniPryamo = Integer.parseInt(scanner.next());
